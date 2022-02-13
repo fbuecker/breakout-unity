@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 36a54f5527ac55a47a3f868d93b6e154
+  - enabled: 1
+    path: Assets/Scenes/ForestLvl.unity
+    guid: f31a46908b9541d45b08827a05d36ceb
+  - enabled: 1
+    path: Assets/Scenes/RiverLvl.unity
+    guid: 1d6c2616c52839e4db2fbbd901a97ac0
+  - enabled: 1
     path: Assets/Scenes/DemoLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MountainLvl.unity
+    guid: 1215a7f8da13ebb45bdd8399ccc1faf0
+  - enabled: 1
+    path: Assets/Scenes/TundraLvl.unity
+    guid: 659203be677ca4e40894fae4b32a8cbf
   - enabled: 1
     path: Assets/Scenes/LoseScene.unity
     guid: d2139f977412ca547859c307e3348592

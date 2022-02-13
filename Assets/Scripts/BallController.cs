@@ -27,9 +27,16 @@ public class BallController : MonoBehaviour
             randomNumber = Random.Range(0, startDirections.Length);
             ballRigidbody.AddForce(startDirections[randomNumber] * ballForce, ForceMode2D.Impulse);
             ballLaunched = true;
-
+        }
+        //ball reset by pressing R cheat
+        if (Input.GetKeyDown(KeyCode.R) && ballLaunched)
+        {
+            ballRigidbody.velocity = Vector3.zero;
+            transform.position = startPosition;
+            ballLaunched = false;
         }
     }
+    //on ball contact with defeat zone, causes the ball to reset and the game master to remove one of the player's lives
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "DefeatZone")
