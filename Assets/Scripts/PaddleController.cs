@@ -47,4 +47,20 @@ public class PaddleController : MonoBehaviour
             ballController.ballRigidbody.velocity = rotation * Vector2.up * ballController.ballRigidbody.velocity.magnitude;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "projectile")
+        {
+            StartCoroutine(SlowPaddle());
+            Destroy(other.gameObject);
+        }
+
+        IEnumerator SlowPaddle()
+        {
+            paddleSpeed -= 3;
+            yield return new WaitForSeconds(3f);
+            paddleSpeed += 3;
+        }
+    }
 }

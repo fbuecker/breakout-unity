@@ -6,6 +6,9 @@ TagManager:
   tags:
   - DefeatZone
   - Ball
+  - 2hitBrick
+  - enemy_brick
+  - projectile
   layers:
   - Default
   - TransparentFX
