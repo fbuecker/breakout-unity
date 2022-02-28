@@ -10,7 +10,30 @@ public class SceneHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            scene = 0;
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            scene = 1;
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            scene = 2;
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            scene = 3;
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            scene = 4;
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 8)
+        {
+            scene = 0;
+        }
     }
     public void OnLevelWasLoaded(int level)
     {

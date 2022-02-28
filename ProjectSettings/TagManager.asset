@@ -9,6 +9,12 @@ TagManager:
   - 2hitBrick
   - enemy_brick
   - projectile
+  - lengthener
+  - life brick
+  - extra life
+  - power brick
+  - Paddle
+  - unbreakable
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class GameMaster : MonoBehaviour
     public float playerLives = 3;
     public Text scoreCounter;
     public Text livesCounter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,14 @@ public class GameMaster : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             SceneManager.LoadScene("MainMenu");
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            SceneManager.LoadScene("FinalWin");
         }
     }
 

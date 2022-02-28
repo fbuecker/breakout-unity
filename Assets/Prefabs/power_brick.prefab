@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 858916004356450830}
   m_Layer: 0
   m_Name: power_brick
-  m_TagString: Untagged
+  m_TagString: power brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,3 +128,6 @@ MonoBehaviour:
   brickSprite: {fileID: 0}
   brickValue: 1
   gameMaster: {fileID: 0}
+  projectile: {fileID: 6674553492954393877, guid: 27ba1d97dfb817d488a557d1c40e08bc, type: 3}
+  brickHit: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+  brickBreak: {fileID: 8300000, guid: f3aebff15a2971c49bac005a7bc5bc9b, type: 3}

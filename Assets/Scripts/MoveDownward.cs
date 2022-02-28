@@ -22,7 +22,7 @@ public class MoveDownward : MonoBehaviour
     {
         if (other.gameObject.tag == "DefeatZone")
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

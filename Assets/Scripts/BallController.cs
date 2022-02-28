@@ -10,12 +10,21 @@ public class BallController : MonoBehaviour
     public int randomNumber;
     public float ballForce;
     public Vector3 startPosition;
+
     public GameMaster gameMaster;
+
+    private AudioSource hitSFX;
+    public AudioClip paddleBounce;
+    public AudioClip hitUnbreakable;
+    public AudioClip launchBall;
+    public AudioClip deathSound;
+ 
 
     // Start is called before the first frame update
     void Start()
     {
         ballRigidbody = GetComponent<Rigidbody2D>();
+        hitSFX = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +36,7 @@ public class BallController : MonoBehaviour
             randomNumber = Random.Range(0, startDirections.Length);
             ballRigidbody.AddForce(startDirections[randomNumber] * ballForce, ForceMode2D.Impulse);
             ballLaunched = true;
+            hitSFX.PlayOneShot(launchBall, 0.4f);
         }
         //ball reset by pressing R cheat
         if (Input.GetKeyDown(KeyCode.R) && ballLaunched)
@@ -41,10 +51,24 @@ public class BallController : MonoBehaviour
     {
         if (other.gameObject.tag == "DefeatZone")
         {
+            hitSFX.PlayOneShot(deathSound, 0.5f);
             ballRigidbody.velocity = Vector3.zero;
             gameMaster.playerLives = gameMaster.playerLives - 1;
             transform.position = startPosition;
             ballLaunched = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+     if (other.gameObject.tag == "Paddle")
+        {
+            hitSFX.PlayOneShot(paddleBounce, 0.3f);
+        }
+
+     if (other.gameObject.tag == "unbreakable")
+        {
+            hitSFX.PlayOneShot(hitUnbreakable, 0.1f);
         }
     }
 }

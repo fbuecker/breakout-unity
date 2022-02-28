@@ -8,11 +8,17 @@ public class PaddleController : MonoBehaviour
     public float paddleSpeed;
     public BallController ballController;
     public float maxBounceAngle = 75f;
+    public float paddleLength = 30f;
+    public GameMaster gameMaster;
+    private AudioSource powerupSound;
+    public AudioClip lifeGet;
+    public AudioClip lenthenerGet;
+    public AudioClip projectileHit;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        powerupSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,13 +60,37 @@ public class PaddleController : MonoBehaviour
         {
             StartCoroutine(SlowPaddle());
             Destroy(other.gameObject);
+            powerupSound.PlayOneShot(projectileHit, 0.5f);
         }
 
+        if (other.gameObject.tag == "lengthener")
+        {
+            StartCoroutine(LengthenPaddle());
+            Destroy(other.gameObject);
+            powerupSound.PlayOneShot(lenthenerGet, 0.5f);
+        }
+
+        if (other.gameObject.tag == "extra life")
+        {
+            gameMaster.playerLives++;
+            Destroy(other.gameObject);
+            powerupSound.PlayOneShot(lifeGet, 0.5f);
+        }
+
+        //coroutine that slows the paddle down for three seconds before returning to original speed
         IEnumerator SlowPaddle()
         {
-            paddleSpeed -= 3;
+            paddleSpeed /= 1.5f;
             yield return new WaitForSeconds(3f);
-            paddleSpeed += 3;
+            paddleSpeed *= 1.5f;
+        }
+
+        //coroutine that lengthens the paddle for 7 seconds before returning it to its original size
+        IEnumerator LengthenPaddle()
+        {
+            gameObject.transform.localScale += new Vector3(paddleLength, 0, 0);
+            yield return new WaitForSeconds(7f);
+            gameObject.transform.localScale += new Vector3(-paddleLength, 0, 0);
         }
     }
 }
