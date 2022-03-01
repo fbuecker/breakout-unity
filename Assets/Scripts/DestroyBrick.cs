@@ -15,6 +15,9 @@ public class DestroyBrick : MonoBehaviour
     public AudioClip brickHit;
     public AudioClip brickBreak;
 
+    public GameObject[] powerUps;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,10 +63,9 @@ public class DestroyBrick : MonoBehaviour
 
         if (gameObject.tag == "power brick")
         {
-            Instantiate(projectile, transform.position, projectile.transform.rotation);
+            Instantiate(powerUps[Random.Range(0, powerUps.Length)], transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
-
 
     }
 }

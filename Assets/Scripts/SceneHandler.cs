@@ -65,11 +65,6 @@ public class SceneHandler : MonoBehaviour
             SceneManager.LoadScene(5);
             Debug.Log("scene is 4");
         }
-        else
-        {
-            Debug.Log("Uh oh");
-            Debug.Log(scene);
-        }
     }
 
     public void ReturnToMenu()

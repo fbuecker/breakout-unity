@@ -15,6 +15,11 @@ public class MoveDownward : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.down * Time.deltaTime * speed);
+
+        if (transform.position.y < -8)
+        {
+            Destroy(gameObject);
+        }
     }
 
     //if the projectile reaches the defeat zone, destroy it

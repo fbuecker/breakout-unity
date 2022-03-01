@@ -909,6 +909,7 @@ MonoBehaviour:
   lifeGet: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   lenthenerGet: {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
   projectileHit: {fileID: 8300000, guid: edd00dfd9179cfa4f909037d2034ae79, type: 3}
+  hustleGet: {fileID: 8300000, guid: 3190f5940754ee74c91ac7020a68bba9, type: 3}
 --- !u!212 &319524647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2881,7 +2882,8 @@ MonoBehaviour:
   - {x: 1, y: 1}
   - {x: -1, y: 1}
   randomNumber: 0
-  ballForce: 5
+  ballForce: 5.3
+  ballSpeed: 15
   startPosition: {x: 0, y: -3, z: 0}
   gameMaster: {fileID: 1736469458}
   paddleBounce: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}

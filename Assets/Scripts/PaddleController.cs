@@ -9,11 +9,14 @@ public class PaddleController : MonoBehaviour
     public BallController ballController;
     public float maxBounceAngle = 75f;
     public float paddleLength = 30f;
+
     public GameMaster gameMaster;
+
     private AudioSource powerupSound;
     public AudioClip lifeGet;
     public AudioClip lenthenerGet;
     public AudioClip projectileHit;
+    public AudioClip hustleGet;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +80,13 @@ public class PaddleController : MonoBehaviour
             powerupSound.PlayOneShot(lifeGet, 0.5f);
         }
 
+        if(other.gameObject.tag == "hustleberry")
+        {
+            StartCoroutine(SpeedUpBall());
+            Destroy(other.gameObject);
+            powerupSound.PlayOneShot(hustleGet, 0.5f);
+        }
+
         //coroutine that slows the paddle down for three seconds before returning to original speed
         IEnumerator SlowPaddle()
         {
@@ -91,6 +101,13 @@ public class PaddleController : MonoBehaviour
             gameObject.transform.localScale += new Vector3(paddleLength, 0, 0);
             yield return new WaitForSeconds(7f);
             gameObject.transform.localScale += new Vector3(-paddleLength, 0, 0);
+        }
+
+        IEnumerator SpeedUpBall()
+        {
+            ballController.ballRigidbody.AddForce(ballController.ballRigidbody.velocity * ballController.ballSpeed);
+            yield return new WaitForSeconds(5f);
+            ballController.ballRigidbody.AddForce(ballController.ballRigidbody.velocity * -ballController.ballSpeed);
         }
     }
 }

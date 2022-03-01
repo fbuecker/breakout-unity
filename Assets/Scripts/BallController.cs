@@ -9,6 +9,8 @@ public class BallController : MonoBehaviour
     public Vector2[] startDirections;
     public int randomNumber;
     public float ballForce;
+    public float ballSpeed = 15.0f;
+    public float honeySpeed = 35.0f;
     public Vector3 startPosition;
 
     public GameMaster gameMaster;
@@ -18,7 +20,7 @@ public class BallController : MonoBehaviour
     public AudioClip hitUnbreakable;
     public AudioClip launchBall;
     public AudioClip deathSound;
- 
+
 
     // Start is called before the first frame update
     void Start()
@@ -61,14 +63,27 @@ public class BallController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-     if (other.gameObject.tag == "Paddle")
+        if (other.gameObject.tag == "Paddle")
         {
             hitSFX.PlayOneShot(paddleBounce, 0.3f);
         }
 
-     if (other.gameObject.tag == "unbreakable")
+        if (other.gameObject.tag == "unbreakable")
         {
             hitSFX.PlayOneShot(hitUnbreakable, 0.1f);
         }
+
+        if (other.gameObject.tag == "honey brick")
+        {
+            ballRigidbody.AddForce(Vector2.down * ballSpeed);
+            StartCoroutine(SpeedUpBall());
+        }
+    }
+
+    IEnumerator SpeedUpBall()
+    {
+        ballRigidbody.AddForce(ballRigidbody.velocity * honeySpeed);
+        yield return new WaitForSeconds(0.7f);
+        ballRigidbody.AddForce(ballRigidbody.velocity * (-honeySpeed / 1.4f));
     }
 }

@@ -22,7 +22,7 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreCounter.text = "Score: " + playerPoints;
+        scoreCounter.text = "Score: " + playerPoints * 10;
         livesCounter.text = "Lives: " + playerLives;
         if (playerLives <= 0)
         {
