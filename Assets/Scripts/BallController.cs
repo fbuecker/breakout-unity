@@ -21,6 +21,8 @@ public class BallController : MonoBehaviour
     public AudioClip launchBall;
     public AudioClip deathSound;
 
+    public ParticleSystem deathParticle;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,7 @@ public class BallController : MonoBehaviour
         if (other.gameObject.tag == "DefeatZone")
         {
             hitSFX.PlayOneShot(deathSound, 0.5f);
+            Instantiate(deathParticle, transform.position, deathParticle.transform.rotation);
             ballRigidbody.velocity = Vector3.zero;
             gameMaster.playerLives = gameMaster.playerLives - 1;
             transform.position = startPosition;

@@ -2318,7 +2318,7 @@ Transform:
   m_LocalScale: {x: 4.4639, y: 4.4806, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1398367477
 GameObject:
@@ -3088,6 +3088,7 @@ MonoBehaviour:
   hitUnbreakable: {fileID: 8300000, guid: b43d102aac6b145468dcaa94a5cccae1, type: 3}
   launchBall: {fileID: 8300000, guid: 881e3f52c86c94f26a60718d35627cd8, type: 3}
   deathSound: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
+  deathParticle: {fileID: 198247871303120836, guid: e473029e4c70ad543a6879b82a732f4f, type: 3}
 --- !u!212 &1943210751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3442,7 +3443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2396657456575868516, guid: 466f8323996bb604c91177225de92929, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2396657456575868516, guid: 466f8323996bb604c91177225de92929, type: 3}
       propertyPath: m_LocalPosition.x

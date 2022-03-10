@@ -319,7 +319,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7623899446430744648, guid: cfdd2417d77262e4eaeeb00500c13bc3, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7623899446430744648, guid: cfdd2417d77262e4eaeeb00500c13bc3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -671,7 +671,7 @@ Transform:
   m_LocalScale: {x: 1, y: 11.566406, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &141188862
 Rigidbody2D:
@@ -707,7 +707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2396657456575868516, guid: 466f8323996bb604c91177225de92929, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2396657456575868516, guid: 466f8323996bb604c91177225de92929, type: 3}
       propertyPath: m_LocalPosition.x
@@ -976,7 +976,7 @@ Transform:
   m_LocalScale: {x: 4.4598, y: 4.4924, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &407503904
 PrefabInstance:
@@ -1269,7 +1269,7 @@ Transform:
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &519420028
 GameObject:
@@ -1559,7 +1559,7 @@ Transform:
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &641215405
 PrefabInstance:
@@ -1841,7 +1841,7 @@ Transform:
   m_LocalScale: {x: 5, y: 7, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &687195197
 AudioSource:
@@ -2175,7 +2175,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1200746179
 PrefabInstance:
@@ -2523,7 +2523,7 @@ RectTransform:
   - {fileID: 338561939}
   - {fileID: 1690429345}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2699,7 +2699,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10.479688, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1628446899
 PrefabInstance:
@@ -3000,7 +3000,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1736469458
 MonoBehaviour:
@@ -3235,6 +3235,7 @@ MonoBehaviour:
   hitUnbreakable: {fileID: 8300000, guid: b43d102aac6b145468dcaa94a5cccae1, type: 3}
   launchBall: {fileID: 8300000, guid: 881e3f52c86c94f26a60718d35627cd8, type: 3}
   deathSound: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
+  deathParticle: {fileID: 198247871303120836, guid: e473029e4c70ad543a6879b82a732f4f, type: 3}
 --- !u!212 &1943210751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3299,7 +3300,7 @@ Transform:
   m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1943210753
 AudioSource:

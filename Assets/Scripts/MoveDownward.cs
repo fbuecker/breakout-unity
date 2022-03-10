@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveDownward : MonoBehaviour
 {
     public float speed = 20.0f;
+    public ParticleSystem powerParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,10 @@ public class MoveDownward : MonoBehaviour
         if (other.gameObject.tag == "DefeatZone")
         {
             Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Paddle")
+        {
+            Instantiate(powerParticle, transform.position, powerParticle.transform.rotation);
         }
     }
 }

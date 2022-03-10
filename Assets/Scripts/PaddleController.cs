@@ -18,6 +18,7 @@ public class PaddleController : MonoBehaviour
     public AudioClip projectileHit;
     public AudioClip hustleGet;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +72,7 @@ public class PaddleController : MonoBehaviour
             StartCoroutine(LengthenPaddle());
             Destroy(other.gameObject);
             powerupSound.PlayOneShot(lenthenerGet, 0.5f);
+            
         }
 
         if (other.gameObject.tag == "extra life")
@@ -78,6 +80,7 @@ public class PaddleController : MonoBehaviour
             gameMaster.playerLives++;
             Destroy(other.gameObject);
             powerupSound.PlayOneShot(lifeGet, 0.5f);
+         
         }
 
         if(other.gameObject.tag == "hustleberry")
@@ -85,6 +88,7 @@ public class PaddleController : MonoBehaviour
             StartCoroutine(SpeedUpBall());
             Destroy(other.gameObject);
             powerupSound.PlayOneShot(hustleGet, 0.5f);
+       
         }
 
         //coroutine that slows the paddle down for three seconds before returning to original speed

@@ -132,6 +132,8 @@ MonoBehaviour:
   projectile: {fileID: 2844181216346438070, guid: ae47e4fafbc511744aa7c85ba5502431, type: 3}
   brickHit: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   brickBreak: {fileID: 8300000, guid: f3aebff15a2971c49bac005a7bc5bc9b, type: 3}
+  breakParticle: {fileID: 19800000, guid: 7d6835d9db898fa4bbfda5d62c496786, type: 3}
+  powerUps: []
 --- !u!82 &-4270929307535359730
 AudioSource:
   m_ObjectHideFlags: 0

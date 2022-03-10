@@ -2884,12 +2884,14 @@ MonoBehaviour:
   randomNumber: 0
   ballForce: 5.3
   ballSpeed: 15
+  honeySpeed: 35
   startPosition: {x: 0, y: -3, z: 0}
   gameMaster: {fileID: 1736469458}
   paddleBounce: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   hitUnbreakable: {fileID: 8300000, guid: b43d102aac6b145468dcaa94a5cccae1, type: 3}
   launchBall: {fileID: 8300000, guid: 881e3f52c86c94f26a60718d35627cd8, type: 3}
   deathSound: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
+  deathParticle: {fileID: 198247871303120836, guid: e473029e4c70ad543a6879b82a732f4f, type: 3}
 --- !u!212 &1943210751
 SpriteRenderer:
   m_ObjectHideFlags: 0

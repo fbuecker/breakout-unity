@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  powerParticle: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
 --- !u!70 &834609153709899334
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class DestroyBrick : MonoBehaviour
     private AudioSource brickAudio;
     public AudioClip brickHit;
     public AudioClip brickBreak;
+    public ParticleSystem breakParticle;
 
     public GameObject[] powerUps;
     
@@ -51,6 +52,7 @@ public class DestroyBrick : MonoBehaviour
         if (numberOfHits >= maxHits)
         {
             AudioSource.PlayClipAtPoint(brickBreak, new Vector2(0, 0), 2.0f);
+            Instantiate(breakParticle, transform.position, breakParticle.transform.rotation);
             gameMaster.playerPoints = gameMaster.playerPoints + brickValue;
             Destroy(this.gameObject);
         }
@@ -58,6 +60,7 @@ public class DestroyBrick : MonoBehaviour
         if (numberOfHits >= maxHits && gameObject.tag == "life brick")
         {
             Instantiate(projectile, transform.position, projectile.transform.rotation);
+            Instantiate(breakParticle, transform.position, breakParticle.transform.rotation);
             Destroy(this.gameObject);
         }
 
